@@ -6,7 +6,6 @@ import { NavLink } from "react-router-dom";
 import { Button } from "../styles/Button";
 
 function ListView({ items }) {
-  var flag = 1;
   return (
     <Wrapper className="section">
       <div className="container-grid">
