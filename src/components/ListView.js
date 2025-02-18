@@ -1,9 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
-import Product from '../pages/Product'
-import FormatPrice from '../helpers/FormatPrice'
-import { NavLink } from 'react-router-dom'
-import { Button } from '../styles/Button'
+import React from "react";
+import styled from "styled-components";
+import Product from "../pages/Product";
+import FormatPrice from "../helpers/FormatPrice";
+import { NavLink } from "react-router-dom";
+import { Button } from "../styles/Button";
 
 function ListView({ items }) {
   return (
@@ -29,7 +29,7 @@ function ListView({ items }) {
         ))}
       </div>
     </Wrapper>
-  )
+  );
 }
 
 const Wrapper = styled.section`
@@ -109,6 +109,6 @@ const Wrapper = styled.section`
       color: #fff;
     }
   }
-`
+`;
 
-export default ListView
+export default ListView;
