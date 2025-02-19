@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
-import styled from 'styled-components'
-import { FiShoppingCart } from 'react-icons/fi'
-import { CgMenu, CgClose } from 'react-icons/cg'
-import { useCart } from '../context/cartContext'
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import styled from "styled-components";
+import { FiShoppingCart } from "react-icons/fi";
+import { CgMenu, CgClose } from "react-icons/cg";
+import { useCart } from "../context/cartContext";
 
 function Navbar() {
-  const [menu, setMenu] = useState(false)
-  const { totalItems } = useCart()
+  const [menu, setMenu] = useState(false);
+  const { totalItems } = useCart(0);
 
   return (
     <Nav>
-      <div className={menu ? 'navbar active' : 'navbar'}>
+      <div className={menu ? "navbar active" : "navbar"}>
         <ul className="navbar-lists">
           <li>
             <NavLink to="/" className="navbar-link home-link">
@@ -53,7 +53,7 @@ function Navbar() {
         </div>
       </div>
     </Nav>
-  )
+  );
 }
 
 const Nav = styled.nav`
@@ -87,7 +87,7 @@ const Nav = styled.nav`
     border: none;
   }
 
-  .mobile-nav-icon[name='close-outline'] {
+  .mobile-nav-icon[name="close-outline"] {
     display: none;
   }
 
@@ -208,6 +208,6 @@ const Nav = styled.nav`
       padding: 0.8rem 1.4rem;
     }
   }
-`
+`;
 
-export default Navbar
+export default Navbar;
